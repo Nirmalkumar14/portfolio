@@ -125,11 +125,11 @@
      /* margin-right: 2rem;  */
   /* } */ 
   
-  .skills-container {
+  /* .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 2rem;
-  }
+  } */
   
   .skill-item {
     text-align: center;
@@ -209,7 +209,14 @@
 
   }
   
- 
+  
+ .about-content{
+  display: flex;
+  align-items: center;
+ }
+ .about-text{
+  align-items: center;
+ }
 
   .project-item:hover {
     transform: translateY(-5px); 
@@ -266,25 +273,79 @@
 
 
   /* Responsive Styles */
-  @media (max-width: 768px) {
-    header {
-      padding: 0.5rem;
-    }
-  
-    nav li {
-      margin: 0 0.5rem;
-    }
-  
-    .about-content {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .about-content img {
-      margin-right: 0;
-      margin-bottom: 1rem;
-    }
+ /* Default styles for all devices */
+body {
+  font-family: Arial, sans-serif;
+  color: #ddd;
+}
+
+/* Media query for screens smaller than 768px (typical tablets and phones) */
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
   }
+
+  /* Example of adjusting header styles for smaller screens */
+  header {
+    background-color: #444;
+    padding: 10px;
+  }
+
+  header ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header ul li {
+    margin-bottom: 5px;
+  }
+
+   header ul li a {
+    color: #fff;
+   } 
+}
+
+/* Media query for screens between 768px and 1024px (typical tablets in landscape) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+    color: #ddd;
+  }
+
+  /* Example of adjusting main content width for tablets */
+  .mcenter {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Example of adjusting project items layout */
+  .project-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Media query for screens larger than 1024px (typical desktops and larger screens) */
+@media (min-width: 1025px) {
+  body {
+    font-size: 18px;
+    color: #ddd;
+  }
+
+  /* Example of adjusting footer layout for desktops */
+  footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    
+  }
+
+  footer .footer1 {
+    flex: 1;
+    text-align: center;
+  }
+}
 
   .bgblue {
     background: linear-gradient(135deg, #fffffff5, #3a4b8a, #ffffff98);
