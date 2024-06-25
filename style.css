@@ -287,13 +287,13 @@ body {
 
   /* Example of adjusting header styles for smaller screens */
   header {
-    background-color: #444;
+    background-color: #2b2d42;
     padding: 10px;
   }
 
   header ul {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
   }
 
   header ul li {
